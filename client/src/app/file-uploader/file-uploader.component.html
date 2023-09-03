@@ -1,0 +1,25 @@
+<main>
+    <div class="header">
+        <div class="btn-menu" (click)="showContextMenu = true">
+            <div class="count">{{filesCount$ | async}}</div>
+        </div>
+        <app-files-list *ngIf="showContextMenu" (close)="showContextMenu = false"></app-files-list>
+    </div>
+    <div class="body">
+        <div class="input">
+            <span class="success" *ngIf="uploadedStatus == 'success'">הקובץ הועלה בהצלחה</span>
+            <span class="error" *ngIf="uploadedStatus == 'error'">פעולת ההעלאת הקובץ נכשלה</span>
+            <input [(ngModel)]="fileName" type="text" placeholder="הכנס כותרת">
+        </div>
+        <button class="btn-upload" (click)="uploader.click()">
+            <span>
+                <img src="assets/upload.svg">
+                {{file?.name || ''}}
+            </span>
+            <span>העלה קובץ</span>
+        </button>
+        <button (click)="uploadFile()" class="btn-submit">שלח</button>
+    </div>
+</main>
+<input hidden type="file" #uploader (change)="fileChange($event)"
+    accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />

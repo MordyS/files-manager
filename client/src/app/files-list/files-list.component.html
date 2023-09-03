@@ -1,0 +1,6 @@
+<div class="bg" (click)="close.emit()"></div>
+
+<span class="file" *ngFor="let file of files$ | async" >
+    <img src="assets/download.svg" (click)="downloadFile(file)">
+    <span>{{ file }}</span>
+</span>

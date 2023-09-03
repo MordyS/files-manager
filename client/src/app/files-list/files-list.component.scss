@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: 5px;
+  font-size: 14px;
+
+  .file {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 5px;
+    z-index: 9;
+
+    img {
+      width: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+}

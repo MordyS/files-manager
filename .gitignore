@@ -1,0 +1,6 @@
+**/dist
+**/node_modules
+**/.angular
+**/.vscode
+**/.editorconfig
+/server/my-files
