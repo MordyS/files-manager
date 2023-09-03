@@ -1,6 +1,6 @@
 # Files Uploader
 
-A simple web application to upload, view and download files built with Nest.js (server), Angular (fron end) and Akita (state managment).
+A simple web application to upload, view and download files built with Nest.js (server), Angular (front end) and Akita (state managment).
 
 ## Project Requirments
 
